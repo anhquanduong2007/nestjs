@@ -3,8 +3,7 @@ import { Module } from '@nestjs/common';
 import { PostsService } from './posts.service';
 
 @Module({
-    imports: [StoreModule.register({
-        dirname: 'store',
+    imports: [StoreModule.forFeature({
         filename: 'posts.json'
     })],
     providers: [PostsService]

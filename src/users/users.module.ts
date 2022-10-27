@@ -4,8 +4,7 @@ import { UsersService } from './users.service';
 import { UsersController } from './users.controller';
 
 @Module({
-  imports: [StoreModule.register({
-    dirname: 'store',
+  imports: [StoreModule.forFeature({
     filename: 'users.json',
   })],
   providers: [UsersService],

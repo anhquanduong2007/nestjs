@@ -1,9 +1,9 @@
 import { StoreService } from './../store/store.service';
-import { Injectable } from '@nestjs/common';
+import { Inject, Injectable } from '@nestjs/common';
 
 @Injectable()
 export class PostsService {
-    constructor(private readonly storeService: StoreService) {
+    constructor(@Inject('STORE_SERVICEposts.json') private storeService: StoreService) {
         this.storeService.save('save zo file posts này!');
     }
 }

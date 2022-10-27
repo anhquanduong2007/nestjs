@@ -6,7 +6,7 @@ import { StoreModule } from './store/store.module';
 import { PostsModule } from './posts/posts.module';
 
 @Module({
-  imports: [UsersModule, PostsModule],
+  imports: [UsersModule, PostsModule,StoreModule.forRoot()],
   controllers: [AppController],
   providers: [AppService],
 })
